@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { GithubComponent } from './github/github.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GithubComponent } from './github/github.component';
     UserComponent,
     HighlightDirective,
     DateCountPipe,
-    GithubComponent
+    GithubComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
