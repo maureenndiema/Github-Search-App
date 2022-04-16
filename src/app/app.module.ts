@@ -8,6 +8,7 @@ import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { GithubComponent } from './github/github.component';
 import { FormComponent } from './form/form.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormComponent } from './form/form.component';
     HighlightDirective,
     DateCountPipe,
     GithubComponent,
-    FormComponent
+    FormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
