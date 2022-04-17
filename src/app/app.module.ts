@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { FormsModule } from '@angular/forms';
+// import { NgProgressModule } from '@ngx-progressbar/core';
+// import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { UserComponent } from './User/User.component';
+// import { UserComponent } from './user/user.component';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { GithubComponent } from './github/github.component';
@@ -27,8 +28,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     // NgProgressModule.forRoot(),
-    NgProgressHttpClientModule,
+    // NgProgressHttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
