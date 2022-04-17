@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 // import { NgProgressModule } from '@ngx-progressbar/core';
 // import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // import { UserComponent } from './user/user.component';
@@ -14,6 +13,8 @@ import { FormComponent } from './form/form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HoverDirective } from './hover.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { GithubService } from './github.service';
 
 @NgModule({
   declarations: [
@@ -31,10 +32,11 @@ import { HoverDirective } from './hover.directive';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     // NgProgressModule.forRoot(),
     // NgProgressHttpClientModule,
   ],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
