@@ -16,6 +16,7 @@ import { HoverDirective } from './hover.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { GithubService } from './github.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { GithubService } from './github.service';
     FormComponent,
     NavbarComponent,
     NotFoundComponent,
-    HoverDirective
+    HoverDirective,
+    
   ],
   imports: [
     BrowserModule,
@@ -40,3 +42,4 @@ import { GithubService } from './github.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
