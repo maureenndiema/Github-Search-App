@@ -13,6 +13,7 @@ import { GithubComponent } from './github/github.component';
 import { FormComponent } from './form/form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HoverDirective } from './hover.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     GithubComponent,
     FormComponent,
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,
