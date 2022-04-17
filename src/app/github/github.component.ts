@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubService } from '../github.service';
 
 @Component({
   selector: 'app-github',
@@ -6,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github.component.css']
 })
 export class GithubComponent implements OnInit {
-  this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
-      // Succesful API request
-      this.quote = new Quote(data.author, data.quote)
-    },err=>{
-        this.quote = new Quote("Winston Churchill","Never never give up!")
-        console.log("An error occurred")
-    })
+  // this.http.get<ApiResponse>().subscribe(data=>{
+  //     // Succesful API request
+  //     this.github = new GithubService()
+  //   },err=>{
+  //       this.github = new GithubService()
+  //       console.log("An error occurred")
+  //   })
   
 
-  constructor() { }
+  // constructor() { }
 
   ngOnInit(): void {
   }
