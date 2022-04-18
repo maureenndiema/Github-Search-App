@@ -2,13 +2,12 @@
  <div class="container-body">
     <div class="row">
         <div class="col-md-12">
-            <!-- <form (ngSubmit)="submit()" #form="ngForm">  -->
-            <form>
+             <form (ngSubmit)="searchUser()" #form="ngForm">  
                 <div class="form-group">
-                  <label for="username">Username</label>
-                    <input type="text" class="form-control" placeholder="Enter github username..." name="Username"  name="username" required id="username">
+                  <label for="username" appHover>Username</label>
+                    <input type="text" class="form-control" placeholder="Enter github username..."  name="Username"  name="username" required id="username">
                 </div> 
-                <button class="btn  "><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <button class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                 </svg></button>
             </form>
@@ -18,7 +17,7 @@
 <div *ngIf="user">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title" style="font-size: 20px;"><strong>GitHub Name: {{user.name}}</strong></h3>
+      <h3 class="panel-title" appHover style="font-size: 20px;"><strong>GitHub Name: {{user.name}}</strong></h3>
     </div>
     <div class="panel-body">
       <div class="row">
@@ -29,11 +28,11 @@
         <div class="col-md-8 col-sm-8 col-xs-12">
           <div class="stats">
             <p>{{user.bio}}</p>
-            <span class="label label-default">{{user.public_repos}} Public Repos</span>
-            <span class="label label-success">{{user.followers}} Followers</span>
-            <span class="label label-info">{{user.following}} Following</span>
+            <button type="button" class="btn btn-info"><span class="label label-default">{{user.public_repos}} Public Repos</span></button>&nbsp;
+            <button type="button" class="btn btn-success"><span class="label label-success">{{user.followers}} Followers</span></button>&nbsp;
+            <button type="button" class="btn btn-warning"><span class="label label-info">{{user.following}} Following</span></button>&nbsp;
             <span class="label label-danger">{{user.company}}</span>
-            <span class="label label-danger">{{user.type}}</span> 
+            <button ype="button" class="btn btn-danger"><span class="label label-danger">{{user.type}}</span></button>&nbsp;
           </div>
           <br/>
           <ul class="list-group">
@@ -47,7 +46,7 @@
               <strong>Email: </strong>{{user.email}}
             </li>
             <li class="list-group-item">
-              <strong>Member Since: </strong>{{user.created_at}}
+              <strong>Member Since: </strong>{{user.created_at|date}}&nbsp;{{user.created_at|dateCount}}&nbsp;days ago
             </li>
           </ul>
         </div>
@@ -57,7 +56,7 @@
   <div class="container" style="padding: right 500px;">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title" style="text-align:center"><strong>User Repos</strong></h3>
+        <h3 class="panel-title" style="text-align:center" appHover><strong>User Repos</strong></h3>
       </div>
       <div class="panel-body">
         <div *ngFor="let repo of repos">

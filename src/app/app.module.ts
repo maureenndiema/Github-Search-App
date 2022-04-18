@@ -15,6 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HoverDirective } from './hover.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { GithubService } from './github.service';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { GithubService } from './github.service';
     NavbarComponent,
     NotFoundComponent,
     HoverDirective,
+    AboutComponent,
     
   ],
   imports: [
