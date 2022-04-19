@@ -1,29 +1,23 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GithubService {
   username: string;
 
-  
-
-  constructor(private http:HttpClient) { 
+  constructor(private http: HttpClient) {
     console.log('Github Service Ready...');
-    this.username =  'maureenndiema';
-
+    this.username = 'maureenndiema';
   }
   getUser() {
-    return this.http.get(`https://api.github.com/users/${this.username}?client_id=${environment.clientID}&client_secret=${environment.apiKey}`)
-    // .map(result => result);
-
+    return this.http.get(`https://api.github.com/users/${this.username}`);
   }
   getRepos() {
-    return this.http.get(`https://api.github.com/users/${this.username}/repos?client_id=${environment.clientID}&client_secret=${environment.apiKey}`)
-    // .map(result => result);
-}
-updateUser(username: string) {
-  this.username = username;
-}
+    return this.http.get(`https://api.github.com/users/${this.username}/repos`);
+  }
+  updateUser(username: string) {
+    this.username = username;
+  }
 }

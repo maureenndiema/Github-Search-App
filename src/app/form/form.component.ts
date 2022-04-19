@@ -14,7 +14,7 @@ export class FormComponent implements OnInit {
   username!: string;
   
 
-  constructor(private _githubService: GithubService) { 
+ constructor(private _githubService: GithubService) { 
     this._githubService.getUser().subscribe(user => {
       console.log(user);
       this.user = user;

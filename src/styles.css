@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: blueviolet;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* opacity: 0.6; */
+  }
+   p{
+    color: yellow;
+  } 
+  a{
+    color: black;
+  }

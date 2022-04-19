@@ -1,19 +1,21 @@
-
- <div class="container-body">
-    <div class="row">
-        <div class="col-md-12">
-             <form (ngSubmit)="searchUser()" #form="ngForm">  
-                <div class="form-group">
-                  <label for="username" appHover>Username</label>
-                    <input type="text" class="form-control" placeholder="Enter github username..." [(ngModel)]="username" name="username" (keyup)="searchUser()" style="text-align:center">
-                </div> 
-                <button class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg></button>
-            </form>
+<div class="container-body">
+  <div class="row">
+    <div class="col-md-12">
+      <form (ngSubmit)="searchUser()" #form="ngForm">
+        <div class="form-group">
+          <label for="username" appHover>Username</label>
+          <input type="text" class="form-control" placeholder="Enter github username..." [(ngModel)]="username"
+            name="username" (keyup)="searchUser()" style="text-align:center">
         </div>
+        <button class="btn" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+            fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg></button>
+      </form>
     </div>
-</div> 
+  </div>
+</div>
 <div *ngIf="user">
   <div class="panel panel-default">
     <div class="panel-heading">
@@ -28,13 +30,17 @@
         <div class="col-md-8 col-sm-8 col-xs-12">
           <div class="stats">
             <p>{{user.bio}}</p>
-            <button type="button" class="btn btn-info"><span class="label label-default">{{user.public_repos}} Public Repos</span></button>&nbsp;
-            <button type="button" class="btn btn-success"><span class="label label-success">{{user.followers}} Followers</span></button>&nbsp;
-            <button type="button" class="btn btn-warning"><span class="label label-info">{{user.following}} Following</span></button>&nbsp;
+            <button type="button" class="btn btn-info"><span class="label label-default">{{user.public_repos}} Public
+                Repos</span></button>&nbsp;
+            <button type="button" class="btn btn-success"><span class="label label-success">{{user.followers}}
+                Followers</span></button>&nbsp;
+            <button type="button" class="btn btn-warning"><span class="label label-info">{{user.following}}
+                Following</span></button>&nbsp;
             <span class="label label-danger">{{user.company}}</span>
-            <button ype="button" class="btn btn-danger"><span class="label label-danger">{{user.type}}</span></button>&nbsp;
+            <button ype="button" class="btn btn-danger"><span
+                class="label label-danger">{{user.type}}</span></button>&nbsp;
           </div>
-          <br/>
+          <br />
           <ul class="list-group">
             <li class="list-group-item">
               <strong>Username: </strong>{{user.name}}
@@ -77,6 +83,4 @@
       </div>
     </div>
   </div>
-  </div>
-  
-
+</div>
